@@ -27,6 +27,11 @@ ActiveRecord::Schema.define(version: 20151210164728) do
     t.integer "category_id"
   end
 
+  create_table "kitten_categories", id: false, force: true do |t|
+    t.integer "kitten_id"
+    t.integer "category_id"
+  end
+
   create_table "kittens", force: true do |t|
     t.string "image", null: false
   end
